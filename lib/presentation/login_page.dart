@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucp1/presentation/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -57,6 +58,28 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
               const SizedBox(height: 40),
+
+              SizedBox(
+                width: 200,
+                child: ElevatedButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.deepOrange,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                      );
+                    }
+                  },
+                  child: Text("Masuk"),
+                ),
+              ),
             ],
           ),
         ),
