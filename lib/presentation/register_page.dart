@@ -30,83 +30,32 @@ class _RegisterPageState extends State<RegisterPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextFormField(
-                controller: namaController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Nama',
-                  hintText: 'Enter your name',
-                  prefixIcon: Icon(Icons.person),
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter your name';
-                  }
-                  return null;
-                },
+              Image.network(
+                'https://ps.w.org/login-customizer/assets/icon-256x256.png?rev=2455454',
+                width: 200, // Lebar gambar (piksel)
+                height: 200, // Tinggi gambar (piksel)
+                fit: BoxFit.cover,
               ),
-              Row(
+              const SizedBox(height: 20),
+              Text("Daftar Akun Baru", style: TextStyle(fontSize: 20)),
+              const SizedBox(height: 30),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Text("Nama Lengkap"),
+                  const SizedBox(height: 10),
                   TextFormField(
-                    controller: emailController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Email',
-                      hintText: 'Enter your email',
+                    controller: namaController,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      hintText: 'Enter your name',
                       prefixIcon: Icon(Icons.person),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
-                      }
-                      return null;
-                    },
-                  ),
-                  TextFormField(
-                    controller: noHpController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'No Hp',
-                      hintText: 'Enter your phone',
-                      prefixIcon: Icon(Icons.person),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your phone';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  TextFormField(
-                    controller: passwordController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Password',
-                      hintText: 'Enter your password',
-                      prefixIcon: Icon(Icons.person),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your password';
-                      }
-                      return null;
-                    },
-                  ),
-                  TextFormField(
-                    controller: confpassController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Konfirmasi Password',
-                      hintText: 'Konfirmasi Password',
-                      prefixIcon: Icon(Icons.person),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your password';
+                        return 'Please enter your name';
                       }
                       return null;
                     },
