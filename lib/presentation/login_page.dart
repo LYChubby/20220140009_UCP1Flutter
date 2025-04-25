@@ -18,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final _formKey = GlobalKey<FormState>();
+    return Scaffold();
   }
 }
