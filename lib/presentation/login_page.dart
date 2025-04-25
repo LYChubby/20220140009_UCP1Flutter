@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucp1/presentation/home_page.dart';
 import 'package:ucp1/presentation/register_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -75,12 +76,22 @@ class _LoginPageState extends State<LoginPage> {
                     if (_formKey.currentState!.validate()) {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                        MaterialPageRoute(builder: (context) => HomePage()),
                       );
                     }
                   },
                   child: Text("Masuk"),
                 ),
+              ),
+              const SizedBox(height: 20),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
+                  );
+                },
+                child: Text('Belum punya akun ? Silahkan Daftar Disini'),
               ),
             ],
           ),
