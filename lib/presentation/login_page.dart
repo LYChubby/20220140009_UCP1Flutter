@@ -29,9 +29,13 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Image.network(
-              //   'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
-              // ),
+              Image.network(
+                'https://ps.w.org/login-customizer/assets/icon-256x256.png?rev=2455454',
+                width: 200, // Lebar gambar (piksel)
+                height: 200, // Tinggi gambar (piksel)
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(height: 20),
               Text("Selamat Datang Kembali", style: TextStyle(fontSize: 20)),
               const SizedBox(height: 30),
               TextFormField(
@@ -73,7 +77,8 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 40),
 
               SizedBox(
-                width: 200,
+                width: 500,
+                height: 50,
                 child: ElevatedButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.deepOrange,
