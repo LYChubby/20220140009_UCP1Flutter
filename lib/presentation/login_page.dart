@@ -70,6 +70,10 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       hintText: 'Enter your password',
                       prefixIcon: Icon(Icons.lock),
+                      suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.visibility_off),
+                      ),
                     ),
                     obscureText: true,
                     validator: (value) {
