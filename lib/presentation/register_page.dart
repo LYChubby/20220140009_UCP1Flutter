@@ -14,6 +14,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController confpassController = TextEditingController();
   final TextEditingController noHpController = TextEditingController();
   bool _obscureText = true;
+  bool _obscureText_ = true;
 
   @override
   void initState() {
@@ -148,6 +149,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                   ),
                                 ),
                               ),
+                              obscureText: _obscureText,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return 'Please enter your password';
@@ -166,7 +168,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             Text("Konfirmasi Password"),
                             const SizedBox(height: 10),
                             TextFormField(
-                              controller: noHpController,
+                              controller: confpassController,
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10.0),
@@ -176,17 +178,18 @@ class _RegisterPageState extends State<RegisterPage> {
                                 suffixIcon: IconButton(
                                   onPressed: () {
                                     setState(() {
-                                      _obscureText =
-                                          !_obscureText; // toggle true/false
+                                      _obscureText_ =
+                                          !_obscureText_; // toggle true/false
                                     });
                                   },
                                   icon: Icon(
-                                    _obscureText
+                                    _obscureText_
                                         ? Icons.visibility_off
                                         : Icons.visibility,
                                   ),
                                 ),
                               ),
+                              obscureText: _obscureText_,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
                                   return 'Please enter your password';
