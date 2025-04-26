@@ -220,10 +220,23 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
+                      if (passwordController.text != confpassController.text) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              'Password tidak sama',
+                              textAlign: TextAlign.center,
+                            ),
+                            backgroundColor: Colors.red,
+                          ),
+                        );
+                      } else {
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomePage()),
+                          (Route) => false,
+                        );
+                      }
                     }
                   },
                   child: Text("Daftar"),
