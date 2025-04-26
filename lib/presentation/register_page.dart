@@ -228,6 +228,32 @@ class _RegisterPageState extends State<RegisterPage> {
                   child: Text("Daftar"),
                 ),
               ),
+              const SizedBox(height: 20),
+              RichText(
+                text: TextSpan(
+                  text: 'Sudah memiliku akun? Silahkan ',
+                  style: TextStyle(color: Colors.black),
+                  children: [
+                    TextSpan(
+                      text: 'Login Disini',
+                      style: TextStyle(
+                        color: Colors.deepOrange,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      recognizer:
+                          TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RegisterPage(),
+                                ),
+                              );
+                            },
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
