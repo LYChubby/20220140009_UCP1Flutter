@@ -13,6 +13,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confpassController = TextEditingController();
   final TextEditingController noHpController = TextEditingController();
+  bool _obscureText = true;
 
   @override
   void initState() {
