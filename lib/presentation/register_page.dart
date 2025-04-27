@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:ucp1/presentation/home_page.dart';
+import 'package:ucp1/presentation/login_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -257,10 +258,10 @@ class _RegisterPageState extends State<RegisterPage> {
                       recognizer:
                           TapGestureRecognizer()
                             ..onTap = () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => RegisterPage(),
+                                  builder: (context) => LoginPage(),
                                 ),
                               );
                             },
