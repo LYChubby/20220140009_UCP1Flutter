@@ -46,6 +46,98 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      body: Container(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Image.network(
+              "https://img.freepik.com/premium-vector/hand-drawn-pempek-palembang-indonesian-traditional-food-background_141928-606.jpg",
+              fit: BoxFit.cover,
+            ),
+            const SizedBox(height: 50),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                      right: 10,
+                      top: 50,
+                      bottom: 50,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.deepOrange,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.group_add, size: 60, color: Colors.white),
+                        Text(
+                          "Data Piket",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.only(
+                      left: 10,
+                      right: 10,
+                      top: 50,
+                      bottom: 50,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.deepOrange,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.dashboard_customize_rounded,
+                          size: 60,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Data Pelanggan",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            Container(
+              padding: const EdgeInsets.all(50),
+              width: 400,
+              decoration: BoxDecoration(
+                color: Colors.deepOrange,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.receipt_long_rounded,
+                    size: 60,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    "Barang Masuk / Keluar",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
