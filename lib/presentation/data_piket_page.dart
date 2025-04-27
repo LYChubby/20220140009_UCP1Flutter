@@ -98,6 +98,7 @@ class _DataPiketPageState extends State<DataPiketPage> {
               const SizedBox(height: 10),
               TextFormField(
                 controller: namaController,
+                readOnly: true,
                 // enabled: false,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
