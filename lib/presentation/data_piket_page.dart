@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ucp1/presentation/detail_piket_page.dart';
 
 class DataPiketPage extends StatefulWidget {
   final String namaPengguna;
@@ -178,33 +179,47 @@ class _DataPiketPageState extends State<DataPiketPage> {
                       child: ListView.builder(
                         itemCount: daftarTugas.length,
                         itemBuilder: (context, index) {
-                          return Container(
-                            margin: const EdgeInsets.only(bottom: 10),
-                            padding: const EdgeInsets.all(16.0),
-                            decoration: BoxDecoration(
-                              color: Colors.deepOrange,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        daftarTugas[index],
-                                        style: TextStyle(color: Colors.white),
+                          return GestureDetector(
+                            onTap: () {
+                              // Navigasi ke halaman detail
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder:
+                                      (context) => DetailPiketPage(
+                                        tugas: daftarTugas[index],
                                       ),
-                                    ),
-                                    Icon(
-                                      Icons.arrow_forward_ios,
-                                      color: Colors.white,
-                                    ),
-                                  ],
                                 ),
-                              ],
+                              );
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(bottom: 10),
+                              padding: const EdgeInsets.all(16.0),
+                              decoration: BoxDecoration(
+                                color: Colors.deepOrange,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          daftarTugas[index],
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_forward_ios,
+                                        color: Colors.white,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           );
                         },
