@@ -10,8 +10,10 @@ class DataPiketPage extends StatefulWidget {
 
 class _DataPiketPageState extends State<DataPiketPage> {
   final TextEditingController tugasController = TextEditingController();
+  final TextEditingController tanggalController = TextEditingController();
   late TextEditingController namaController = TextEditingController();
   List<String> daftarTugas = [];
+  List<DateTime?> deadlines = [];
   String? dateError;
   DateTime? selectedDate;
 
@@ -26,6 +28,8 @@ class _DataPiketPageState extends State<DataPiketPage> {
     if (pickedDate != null) {
       setState(() {
         selectedDate = pickedDate;
+        tanggalController.text =
+            "${pickedDate.day}/${pickedDate.month}/${pickedDate.year}";
       });
     }
   }
@@ -82,6 +86,29 @@ class _DataPiketPageState extends State<DataPiketPage> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                 ),
+              ),
+              const SizedBox(height: 10),
+              Text("Pilih Tanggal"),
+              const SizedBox(height: 10),
+              TextFormField(
+                controller: tanggalController,
+                readOnly: true,
+                decoration: InputDecoration(
+                  hintText: 'Pilih Tanggal',
+                  prefixIcon: IconButton(
+                    onPressed: _selectDate,
+                    icon: Icon(Icons.date_range),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Pilih Tanggal Terlebih Dahulu';
+                  }
+                  return null;
+                },
               ),
             ],
           ),
