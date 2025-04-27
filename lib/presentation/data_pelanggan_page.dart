@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:ucp1/presentation/detail_cust_page.dart';
 
 class DataPelangganPage extends StatefulWidget {
-  const DataPelangganPage({super.key});
+  final String namaPengguna;
+  const DataPelangganPage({super.key, required this.namaPengguna});
 
   @override
   State<DataPelangganPage> createState() => _DataPelangganPageState();
@@ -216,6 +217,7 @@ class _DataPelangganPageState extends State<DataPelangganPage> {
                         MaterialPageRoute(
                           builder:
                               (context) => DetailCustPage(
+                                namaPengguna: widget.namaPengguna,
                                 nama: namaCustController.text,
                                 email: emailController.text,
                                 noHp: noHpController.text,
