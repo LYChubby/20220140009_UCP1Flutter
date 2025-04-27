@@ -112,7 +112,11 @@ class _LoginPageState extends State<LoginPage> {
                     if (_formKey.currentState!.validate()) {
                       Navigator.pushAndRemoveUntil(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(
+                          builder:
+                              (context) =>
+                                  HomePage(namaPengguna: emailController.text),
+                        ),
                         (Route) => false,
                       );
                     }

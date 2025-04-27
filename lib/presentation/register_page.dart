@@ -234,7 +234,12 @@ class _RegisterPageState extends State<RegisterPage> {
                       } else {
                         Navigator.pushAndRemoveUntil(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(
+                            builder:
+                                (context) => HomePage(
+                                  namaPengguna: emailController.text,
+                                ),
+                          ),
                           (Route) => false,
                         );
                       }
