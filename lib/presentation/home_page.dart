@@ -25,14 +25,14 @@ class HomePage extends StatelessWidget {
           children: [
             Text(
               'Selamat Datang',
-              style: TextStyle(color: Colors.white, fontSize: 18),
+              style: TextStyle(color: Colors.white, fontSize: 15),
             ),
             Text(
               '$namaPengguna',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 14,
+                fontSize: 20,
               ),
             ),
           ],
