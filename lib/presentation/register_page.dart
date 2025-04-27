@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
 import 'package:ucp1/presentation/home_page.dart';
 import 'package:ucp1/presentation/login_page.dart';
 
@@ -102,6 +103,11 @@ class _RegisterPageState extends State<RegisterPage> {
                             const SizedBox(height: 10),
                             TextFormField(
                               controller: noHpController,
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                FilteringTextInputFormatter
+                                    .digitsOnly, // Hanya menerima digit
+                              ],
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10.0),
