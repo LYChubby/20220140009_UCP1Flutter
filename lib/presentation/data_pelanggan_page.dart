@@ -214,7 +214,15 @@ class _DataPelangganPageState extends State<DataPelangganPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailCustPage(),
+                          builder:
+                              (context) => DetailCustPage(
+                                nama: namaCustController.text,
+                                email: emailController.text,
+                                noHp: noHpController.text,
+                                alamat: alamatController.text,
+                                provinsi: provinsiController.text,
+                                kodePos: kodePosController.text,
+                              ),
                         ),
                       );
                     }
