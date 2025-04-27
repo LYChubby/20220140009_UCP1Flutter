@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DataPiketPage extends StatefulWidget {
-  const DataPiketPage({super.key});
+  final String namaPengguna;
+  const DataPiketPage({super.key, required this.namaPengguna});
 
   @override
   State<DataPiketPage> createState() => _DataPiketPageState();
@@ -9,6 +10,7 @@ class DataPiketPage extends StatefulWidget {
 
 class _DataPiketPageState extends State<DataPiketPage> {
   final TextEditingController tugasController = TextEditingController();
+  late TextEditingController namaController = TextEditingController();
   List<String> daftarTugas = [];
   String? dateError;
   DateTime? selectedDate;
@@ -37,6 +39,13 @@ class _DataPiketPageState extends State<DataPiketPage> {
   @override
   void initState() {
     super.initState();
+    namaController = TextEditingController(text: widget.namaPengguna);
+  }
+
+  @override
+  void dispose() {
+    namaController.dispose();
+    super.dispose();
   }
 
   @override
@@ -55,6 +64,28 @@ class _DataPiketPageState extends State<DataPiketPage> {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
+      ),
+      body: Form(
+        key: _formKey,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("Nama Anggota"),
+              const SizedBox(height: 10),
+              TextFormField(
+                controller: namaController,
+                // enabled: false,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
