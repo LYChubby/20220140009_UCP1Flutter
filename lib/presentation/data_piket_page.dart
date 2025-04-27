@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:ucp1/presentation/detail_piket_page.dart';
 
 class DataPiketPage extends StatefulWidget {
@@ -21,16 +23,19 @@ class _DataPiketPageState extends State<DataPiketPage> {
   Future<void> _selectDate() async {
     final DateTime? pickedDate = await showDatePicker(
       context: context,
-      initialDate: DateTime(2021, 7, 25),
-      firstDate: DateTime(2021),
-      lastDate: DateTime(2022),
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2025),
+      lastDate: DateTime(2030),
     );
 
     if (pickedDate != null) {
       setState(() {
         selectedDate = pickedDate;
         tanggalController.text =
-            "${pickedDate.day}/${pickedDate.month}/${pickedDate.year}";
+            tanggalController.text = DateFormat(
+              'EEEE, dd MMMM yyyy',
+              'id_ID',
+            ).format(selectedDate!);
       });
     }
   }
@@ -39,6 +44,8 @@ class _DataPiketPageState extends State<DataPiketPage> {
     setState(() {
       daftarTugas.add(tugasController.text);
       deadlines.add(selectedDate);
+      tugasController.clear();
+      tanggalController.clear();
     });
   }
 
@@ -46,6 +53,10 @@ class _DataPiketPageState extends State<DataPiketPage> {
   void initState() {
     super.initState();
     namaController = TextEditingController(text: widget.namaPengguna);
+    initializeDateFormatting('id_ID', null).then((_) {
+      // Inisialisasi selesai
+      setState(() {});
+    });
   }
 
   @override
@@ -63,7 +74,12 @@ class _DataPiketPageState extends State<DataPiketPage> {
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Icon(Icons.arrow_back, color: Colors.white),
+          child: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back, color: Colors.white),
+          ),
         ),
         title: Text(
           "Piket Gudang",
@@ -188,6 +204,8 @@ class _DataPiketPageState extends State<DataPiketPage> {
                                   builder:
                                       (context) => DetailPiketPage(
                                         tugas: daftarTugas[index],
+                                        tanggal: deadlines[index].toString(),
+                                        namaPengguna: widget.namaPengguna,
                                       ),
                                 ),
                               );
