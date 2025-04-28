@@ -154,7 +154,7 @@ class HomePage extends StatelessWidget {
               },
               child: Container(
                 padding: const EdgeInsets.all(50),
-                width: 400,
+                width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.deepOrange,
                   borderRadius: BorderRadius.circular(12),
