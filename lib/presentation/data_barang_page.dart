@@ -21,6 +21,13 @@ class _DataBarangPageState extends State<DataBarangPage> {
   String? selectedValueBarang;
   List<String> jenisBarang = ['Carrier', 'Sleeping Bag', 'Tenda', 'Sepatu'];
 
+  final Map<String, int> hargaBarang = {
+    'Carrier': 500000,
+    'Sleeping Bag': 300000,
+    'Tenda': 1000000,
+    'Sepatu': 400000,
+  };
+
   Future<void> _selectDate() async {
     final DateTime? pickedDate = await showDatePicker(
       context: context,
