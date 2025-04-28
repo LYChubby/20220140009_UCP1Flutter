@@ -37,13 +37,14 @@ class DetailBarangPage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 ClipOval(
-                  child: Image.asset(
-                    "assets/fri.jpeg",
+                  child: Image.network(
+                    "https://cdn-icons-png.flaticon.com/512/11412/11412145.png",
                     width: 150, // Lebar dan tinggi harus sama
                     height: 150,
                     fit: BoxFit.cover,
                   ),
                 ),
+                const SizedBox(height: 20),
                 Text(
                   "Data Berhasil Disimpan",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
