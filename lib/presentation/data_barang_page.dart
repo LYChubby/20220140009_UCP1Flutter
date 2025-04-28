@@ -14,12 +14,21 @@ class _DataBarangPageState extends State<DataBarangPage> {
   final TextEditingController tanggalController = TextEditingController();
   final TextEditingController jumlahBarangController = TextEditingController();
   final TextEditingController hargaController = TextEditingController();
+  int totalHarga = 0;
   String? dateError;
   DateTime? selectedDate;
   String? selectedValueTransaksi;
   List<String> jenisTransaksi = ['Barang Masuk', 'Barang Keluar'];
   String? selectedValueBarang;
   List<String> jenisBarang = ['Carrier', 'Sleeping Bag', 'Tenda', 'Sepatu'];
+
+  void calculateTotalHarga() {
+    setState(() {
+      int jumlahBarang = int.tryParse(jumlahBarangController.text) ?? 0;
+      int hargaSatuan = hargaBarang[selectedValueBarang] ?? 0;
+      totalHarga = jumlahBarang * hargaSatuan;
+    });
+  }
 
   final Map<String, int> hargaBarang = {
     'Carrier': 500000,
