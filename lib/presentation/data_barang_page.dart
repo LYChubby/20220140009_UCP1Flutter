@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:ucp1/presentation/detail_barang_page.dart';
 
 class DataBarangPage extends StatefulWidget {
   final String namaPengguna;
@@ -256,14 +257,21 @@ class _DataBarangPageState extends State<DataBarangPage> {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       calculateTotalHarga();
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder:
-                      //         (context) =>
-                      //             HomePage(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder:
+                              (context) => DetailBarangPage(
+                                namaPengguna: widget.namaPengguna,
+                                tanggal: tanggalController.text,
+                                jenisTransaksi: selectedValueTransaksi!,
+                                jenisBarang: selectedValueBarang!,
+                                jumlahBarang: jumlahBarangController.text,
+                                hargaSatuan: hargaController.text,
+                                totalHarga: totalHarga.toString(),
+                              ),
+                        ),
+                      );
                     }
                   },
                   child: Text("Submit"),
