@@ -154,6 +154,14 @@ class _DataBarangPageState extends State<DataBarangPage> {
                 onChanged: (String? newValue) {
                   setState(() {
                     selectedValueBarang = newValue;
+                    if (newValue != null) {
+                      int harga = hargaBarang[newValue] ?? 0;
+                      hargaController.text = NumberFormat.currency(
+                        locale: 'id_ID',
+                        symbol: 'Rp ',
+                        decimalDigits: 2,
+                      ).format(harga);
+                    }
                   });
                 },
                 validator: (value) {
