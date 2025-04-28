@@ -158,7 +158,7 @@ class _DataBarangPageState extends State<DataBarangPage> {
                       int harga = hargaBarang[newValue] ?? 0;
                       hargaController.text = NumberFormat.currency(
                         locale: 'id_ID',
-                        symbol: 'Rp ',
+                        symbol: "Rp. ",
                         decimalDigits: 2,
                       ).format(harga);
                     }
@@ -214,7 +214,6 @@ class _DataBarangPageState extends State<DataBarangPage> {
                           controller: hargaController,
                           readOnly: true,
                           decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.currency_bitcoin),
                             hintText: "Harga Satuan",
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
@@ -231,6 +230,33 @@ class _DataBarangPageState extends State<DataBarangPage> {
                     ),
                   ),
                 ],
+              ),
+              const SizedBox(height: 30),
+              SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: ElevatedButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.deepOrange,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder:
+                      //         (context) =>
+                      //             HomePage(),
+                      //   ),
+                      // );
+                    }
+                  },
+                  child: Text("Submit"),
+                ),
               ),
             ],
           ),
