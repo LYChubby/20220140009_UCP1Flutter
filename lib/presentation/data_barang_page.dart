@@ -4,7 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 class DataBarangPage extends StatefulWidget {
-  const DataBarangPage({super.key});
+  final String namaPengguna;
+  const DataBarangPage({super.key, required this.namaPengguna});
 
   @override
   State<DataBarangPage> createState() => _DataBarangPageState();
@@ -254,6 +255,7 @@ class _DataBarangPageState extends State<DataBarangPage> {
                   ),
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
+                      calculateTotalHarga();
                       // Navigator.push(
                       //   context,
                       //   MaterialPageRoute(
