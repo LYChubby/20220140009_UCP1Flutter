@@ -37,7 +37,7 @@ class _RegisterPageState extends State<RegisterPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.network(
-                'https://ps.w.org/login-customizer/assets/icon-256x256.png?rev=2455454',
+                'https://static.vecteezy.com/system/resources/thumbnails/051/102/095/small_2x/pempek-an-amazing-indonesian-food-illustration-png.png',
                 width: 200, // Lebar gambar (piksel)
                 height: 200, // Tinggi gambar (piksel)
                 fit: BoxFit.cover,
