@@ -8,8 +8,15 @@ class DataBarangPage extends StatefulWidget {
 }
 
 class _DataBarangPageState extends State<DataBarangPage> {
+  final TextEditingController tanggalController = TextEditingController();
+  final TextEditingController jumlahBarangController = TextEditingController();
+  final TextEditingController jenisTransController = TextEditingController();
+  final TextEditingController jenisBarangController = TextEditingController();
+  final TextEditingController hargaController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final _formKey = GlobalKey<FormState>();
+    return Scaffold();
   }
 }
