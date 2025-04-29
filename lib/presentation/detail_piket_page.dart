@@ -20,7 +20,7 @@ class DetailPiketPage extends StatelessWidget {
     ).format(DateTime.parse(tanggal));
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Color.fromARGB(255, 88, 45, 29),
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -48,7 +48,7 @@ class DetailPiketPage extends StatelessWidget {
                   child: Text(
                     formattedDate,
                     style: TextStyle(
-                      color: Colors.deepOrange,
+                      color: Color.fromARGB(255, 88, 45, 29),
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
@@ -58,7 +58,7 @@ class DetailPiketPage extends StatelessWidget {
                   margin: const EdgeInsets.only(bottom: 10),
                   padding: const EdgeInsets.all(12.0),
                   decoration: BoxDecoration(
-                    color: Colors.deepOrange,
+                    color: Color.fromARGB(255, 88, 45, 29),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Text(
@@ -74,7 +74,7 @@ class DetailPiketPage extends StatelessWidget {
               margin: const EdgeInsets.only(bottom: 10),
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
-                color: Colors.deepOrange,
+                color: Color.fromARGB(255, 88, 45, 29),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(tugas, style: TextStyle(color: Colors.white)),

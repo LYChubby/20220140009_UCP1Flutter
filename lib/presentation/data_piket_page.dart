@@ -70,7 +70,7 @@ class _DataPiketPageState extends State<DataPiketPage> {
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Color.fromARGB(255, 88, 45, 29),
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -162,7 +162,7 @@ class _DataPiketPageState extends State<DataPiketPage> {
                       height: 55,
                       child: ElevatedButton(
                         style: TextButton.styleFrom(
-                          backgroundColor: Colors.deepOrange,
+                          backgroundColor: Color.fromARGB(255, 88, 45, 29),
                           foregroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -215,7 +215,7 @@ class _DataPiketPageState extends State<DataPiketPage> {
                               margin: const EdgeInsets.only(bottom: 10),
                               padding: const EdgeInsets.all(16.0),
                               decoration: BoxDecoration(
-                                color: Colors.deepOrange,
+                                color: Color.fromARGB(255, 88, 45, 29),
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Column(

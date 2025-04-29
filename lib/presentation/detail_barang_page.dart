@@ -38,7 +38,7 @@ class DetailBarangPage extends StatelessWidget {
               children: [
                 ClipOval(
                   child: Image.network(
-                    "https://cdn-icons-png.flaticon.com/512/11412/11412145.png",
+                    "https://myim3banner.kloc.co/assets/uploads/payment_success_bg_1696413362.png",
                     width: 150, // Lebar dan tinggi harus sama
                     height: 150,
                     fit: BoxFit.cover,
@@ -120,7 +120,7 @@ class DetailBarangPage extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepOrange,
+                      backgroundColor: Color.fromARGB(255, 88, 45, 29),
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(

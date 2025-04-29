@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 50,
                 child: ElevatedButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Color.fromARGB(255, 88, 45, 29),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -133,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextSpan(
                       text: 'Daftar Disini',
                       style: TextStyle(
-                        color: Colors.deepOrange,
+                        color: Color.fromARGB(255, 88, 45, 29),
                         fontWeight: FontWeight.bold,
                       ),
                       recognizer:

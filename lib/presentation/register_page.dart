@@ -219,7 +219,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 50,
                 child: ElevatedButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Color.fromARGB(255, 88, 45, 29),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -263,7 +263,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     TextSpan(
                       text: 'Login Disini',
                       style: TextStyle(
-                        color: Colors.deepOrange,
+                        color: Color.fromARGB(255, 88, 45, 29),
                         fontWeight: FontWeight.bold,
                       ),
                       recognizer:

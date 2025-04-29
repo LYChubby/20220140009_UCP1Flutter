@@ -72,7 +72,7 @@ class _DataBarangPageState extends State<DataBarangPage> {
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Color.fromARGB(255, 88, 45, 29),
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -248,7 +248,7 @@ class _DataBarangPageState extends State<DataBarangPage> {
                 height: 50,
                 child: ElevatedButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Color.fromARGB(255, 88, 45, 29),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),

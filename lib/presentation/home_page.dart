@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Color.fromARGB(255, 88, 45, 29), // Ubah warna di sini
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                         bottom: 50,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.deepOrange,
+                        color: Color.fromARGB(255, 88, 45, 29),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Column(
@@ -121,7 +121,7 @@ class HomePage extends StatelessWidget {
                         bottom: 50,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.deepOrange,
+                        color: Color.fromARGB(255, 88, 45, 29),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Column(
@@ -159,7 +159,7 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(50),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.deepOrange,
+                  color: Color.fromARGB(255, 88, 45, 29),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(

@@ -24,7 +24,7 @@ class DetailCustPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Color.fromARGB(255, 88, 45, 29),
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -140,7 +140,7 @@ class DetailCustPage extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Color.fromARGB(255, 88, 45, 29),
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(

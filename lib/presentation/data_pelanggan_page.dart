@@ -23,7 +23,7 @@ class _DataPelangganPageState extends State<DataPelangganPage> {
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Color.fromARGB(255, 88, 45, 29),
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -204,7 +204,7 @@ class _DataPelangganPageState extends State<DataPelangganPage> {
                 height: 60,
                 child: ElevatedButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: Colors.deepOrange,
+                    backgroundColor: Color.fromARGB(255, 88, 45, 29),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -239,9 +239,9 @@ class _DataPelangganPageState extends State<DataPelangganPage> {
                 child: ElevatedButton(
                   style: TextButton.styleFrom(
                     elevation: 0,
-                    foregroundColor: Colors.deepOrange,
+                    foregroundColor: Color.fromARGB(255, 88, 45, 29),
                     side: const BorderSide(
-                      color: Color.fromARGB(255, 175, 174, 174), // warna border
+                      color: Color.fromARGB(255, 175, 174, 174),
                       width: 1, // ketebalan border
                     ),
                     shape: RoundedRectangleBorder(
