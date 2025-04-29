@@ -29,7 +29,7 @@
 
 ![14  Validasi Data Pelanggan](https://github.com/user-attachments/assets/effe02a8-168e-4559-a318-e2a875da1091)
 
-![15  Isi Data Pelanggan](https://github.com/user-attachments/assets/98f5944b-fb7d-445e-b091-0248ec7965f8)
+![15  Isi Data Pelanggan](https://github.com/user-attachments/assets/8591a81f-0a92-4a52-af09-9139a0f661d5)
 
 ![16  Detail Pelanggan](https://github.com/user-attachments/assets/289ed7ed-cc16-4464-b0cb-4947e6eba107)
 
